@@ -9,5 +9,6 @@ namespace Balqui.Models
         }
 
         public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<PaymentType> PaymentTypes { get; set; }
     }
 }
