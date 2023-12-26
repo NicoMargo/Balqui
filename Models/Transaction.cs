@@ -17,7 +17,12 @@ namespace Balqui.Models
 
         [Required(ErrorMessage = "El tipo de pago es obligatorio")]
         [Range(1, byte.MaxValue)]
+
+
         public byte IdPaymentType { get; set; }
+        //el campo superior y el inferior a este comentario son necesarios para la relacion 1 a n
+        //entre las clases
+        public PaymentType PaymentType { get; set; }
 
         [Required(ErrorMessage = "La descripcion es obligatorio")]
         [StringLength(1000, MinimumLength = 2, ErrorMessage = "La descripcion debe tener de 2 a 1000 caracteres")]

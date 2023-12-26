@@ -11,7 +11,10 @@ namespace Balqui.Models
 
         [Required(ErrorMessage = "El Tipo de pago es obligatorio")]
         [StringLength(100, MinimumLength = 2, ErrorMessage = "El nombre debe tener de 2 a 100 caracteres")]
-        public string Name { get; set; }        
+        public string Name { get; set; }
+
+        //campo requerido para relacion 1 a n
+        public ICollection<Transaction> Transactions { get; set; }
 
         public PaymentType()
         {
